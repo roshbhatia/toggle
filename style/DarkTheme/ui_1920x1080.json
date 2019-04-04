@@ -571,12 +571,12 @@
                 ],
                 "rotation-angle-y": 180.0,
                 "visible": false,
-                "background-color": "white",
+                "background-color": "DarkSlateGrey",
                 "children": [
                   {
                     "id": "side2-content",
                     "type": "ClutterActor",
-                    "background-color": "white",
+                    "background-color": "DarkSlateGrey",
                     "children": [
                       {
                         "id": "content-flip",
