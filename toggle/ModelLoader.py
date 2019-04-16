@@ -35,7 +35,7 @@ class ModelLoader(Clutter.Actor):
 
   def load_models(self):
     self.models = bidirectional_cycle([
-        f for f in listdir(self.path) if isfile(join(self.path, f)) and (".stl" in f or ".STL" in f)
+        f for f in listdir(self.path) if isfile(join(self.path, f)) and (".stl" in f or ".STL" in f or ".gco" in f)
     ])
 
     # Load the first model
