@@ -126,7 +126,7 @@ class Toggle:
     config.screen_full = config.getboolean("Screen", "fullscreen")
 
     # Set up tabs
-    config.tabs = CubeTabs(config.ui, 4)
+    config.tabs = CubeTabs(config.ui, 5)
     config.splash = Splash(config)
     config.splash.set_status("Starting Toggle {} ...".format(__version__))
     config.jog = Jog(config)

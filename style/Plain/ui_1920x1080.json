@@ -386,7 +386,7 @@
                 "height" : 1080,
                 "pivot-point-z": -540.0,
                 "pivot-point": [0.5, 0.0],
-                "rotation-angle-y": 90.0,
+                "rotation-angle-y": 72.0,
                 "background-color": "white",
                 "visible": false,
                 "children": [{
@@ -474,7 +474,7 @@
                 "height" : 1080,
                 "pivot-point-z": -540.0,
                 "pivot-point": [0.5, 0.0],
-                "rotation-angle-y": 180.0,
+                "rotation-angle-y": 144.0,
                 "visible": false,
                 "background-color": "white",
                 "children": [{
@@ -668,7 +668,7 @@
                 "height" : 1080,
                 "pivot-point-z": -540.0,
                 "pivot-point": [0.5, 0.0],
-                "rotation-angle-y": 270.0,
+                "rotation-angle-y": 216.0,
                 "visible": false,
                 "background-color": "white",
                 "children": [{
@@ -897,6 +897,49 @@
                     "x": 1777,
                     "y": 15,
                     "visible": true
+                }]
+            },{
+                "id": "side4",
+                "type" : "ClutterActor",
+                "width" : 1920,
+                "height" : 1080,
+                "pivot-point-z": -540.0,
+                "pivot-point": [0.5, 0.0],
+                "rotation-angle-y": 288.0,
+                "background-color": "white",
+                "visible": false,
+                "children": [{
+                    "id": "side4-content",
+                    "type": "ClutterActor",
+                    "background-color": "#FFFFFFFF",
+                    "children" : [{
+                        "id": "temp-button",
+                        "type": "MxButton",
+                        "style-class": "temp",
+                        "is_toggle": true,
+                        "x": 596,
+                        "y": 900,
+                        "width": 128,
+                        "height": 128
+                    }]
+                },{
+                    "id": "side4-btn-prev",
+                    "type": "MxButton",
+                    "style-class": "settings",
+                    "is_toggle": true,
+                    "x": 15,
+                    "y": 15,
+                    "height": 128,
+                    "width": 128
+                },{
+                    "id": "side4-btn-next",
+                    "type": "MxButton",
+                    "style-class": "print",
+                    "is_toggle": true,
+                    "x": 1777,
+                    "y": 15,
+                    "height": 128,
+                    "width": 128
                 }]
             }]
         },{

@@ -29,8 +29,8 @@ class CubeTabs():
       tap_next.connect("tap", self.btn_next)
 
       t = Clutter.PropertyTransition(property_name='rotation-angle-y')
-      t.set_from(i * -90)
-      t.set_to(i * -90 - 90)
+      t.set_from(i * -72)
+      t.set_to(i * -72 - 72)
       t.add_marker("appear", 0.5)
       t.connect("marker-reached::appear", self.appear)
       t.connect("completed", self.completed)
@@ -54,7 +54,7 @@ class CubeTabs():
     # Set up page 0 to page 2 transition
     self.t2 = Clutter.PropertyTransition(property_name='rotation-angle-y')
     self.t2.set_from(0)
-    self.t2.set_to(180)
+    self.t2.set_to(216)
     self.t2.add_marker("appear", 0.5)
     self.t2.connect("marker-reached::appear", self.appear)
     self.t2.connect("completed", self.intro_completed)
@@ -85,7 +85,7 @@ class CubeTabs():
     if self.tg.is_playing():
       return
     self.dis = self.sides[self.current_side]
-    self.current_side = 3 if self.current_side == 0 else self.current_side - 1
+    self.current_side = (self.num_tabs - 1) if self.current_side == 0 else self.current_side - 1
     self.tg = self.tgs[self.current_side]
     self.app = self.sides[self.current_side]
     self.app.set_opacity(1)
@@ -102,7 +102,7 @@ class CubeTabs():
       return
     self.dis = self.sides[self.current_side]
     self.tg = self.tgs[self.current_side]
-    self.current_side = (self.current_side + 1) % 4
+    self.current_side = (self.current_side + 1) % self.num_tabs
     self.app = self.sides[self.current_side]
     self.app.set_opacity(0)
     self.app.show()
@@ -114,7 +114,7 @@ class CubeTabs():
       self.selected_callbacks[self.current_side]()
 
   def appear(self, one, two, three):
-    self.box.set_child_at_index(self.app, 4)
+    self.box.set_child_at_index(self.app, self.num_tabs)
     self.app.set_opacity(255)
     # self.app.show()
 
@@ -134,7 +134,7 @@ class CubeTabs():
     self.current_side = 2
     self.app = self.sides[2]
     self.dis = self.sides[0]
-    self.box.set_child_at_index(self.dis, 4)
+    self.box.set_child_at_index(self.dis, self.num_tabs)
     self.app.set_opacity(1)
     self.app.show()
     self.preload.start()
@@ -158,7 +158,7 @@ if __name__ == '__main__':
 
   _stage = ui.get_object("stage")
   _stage.set_title("Cubic tabs")
-  tabs = CubeTabs(ui, 4)
+  tabs = CubeTabs(ui, 5)
   _stage.connect("destroy", lambda w: Clutter.main_quit())
   _stage.show_all()
   Clutter.main()
