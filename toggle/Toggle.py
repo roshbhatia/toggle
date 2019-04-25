@@ -81,6 +81,9 @@ gi.require_version('Mash', '0.3')
 gi.require_version('Cogl', '1.0')
 gi.require_version('Clutter', '1.0')
 
+# imports to set up full config file on runtime
+import style.Base as Base_Config
+
 # Set up logging
 logging.basicConfig(
     level=logging.DEBUG,
@@ -298,6 +301,10 @@ class Toggle:
 
 
 def main():
+
+  # create full config json:
+  Base_Config.base.make_base()
+
   t = Toggle()
   t.run()
 

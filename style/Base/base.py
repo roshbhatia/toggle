@@ -118,5 +118,6 @@ conf = [{
     }]
 }]
 
-with open("full_conf.json", "w") as fh:
-  json.dump(conf, fh)
+def make_base () :
+    with open("./style/base/full_conf.json", "w") as fh: # relative to toggle/Toggle.py
+        json.dump(conf, fh)
