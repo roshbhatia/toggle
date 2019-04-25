@@ -1,5 +1,10 @@
 import json
 import tkinter as tk
+import os, sys
+
+sys.path.append(os.path.abspath("/usr/local/lib/python3.5/dist-packages/Toggle-0+untagged.273.dev.new.config.scheme.geb9318b.dirty-py3.5.egg/style/Base/"))
+print('**************************************************')
+print(sys.path)
 
 import box_children
 import clutter_children
@@ -119,5 +124,5 @@ conf = [{
 }]
 
 def make_base () :
-    with open("./style/base/full_conf.json", "w") as fh: # relative to toggle/Toggle.py
+    with open("../style/Base/full_conf.json", "w") as fh: # relative to toggle/Toggle.py
         json.dump(conf, fh)

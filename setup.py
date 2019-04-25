@@ -38,9 +38,7 @@ setup(
         'models/platforms/makerbot_cupcake.stl']),
       ('/usr/share/models/', [
         'models/calibration-cube.stl']),
-      ('/etc/toggle/style/Base', [
-        'style/Base/full_conf.json'
-      ]),
+      ('/etc/toggle/style/Base', []),
       ('/etc/toggle/style/Plain', [
         'style/Plain/style.css',
         'style/Plain/ui_800x480.json',

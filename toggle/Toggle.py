@@ -47,7 +47,6 @@ License: GNU GPL v3: http://www.gnu.org/copyleft/gpl.html
  You should have received a copy of the GNU General Public License
  along with Toggle.  If not, see <http://www.gnu.org/licenses/>.
 """
-
 from .Jog import Jog
 from .Network import Network, NetworkManager, ConnMan
 from .Settings import Settings
@@ -82,7 +81,13 @@ gi.require_version('Cogl', '1.0')
 gi.require_version('Clutter', '1.0')
 
 # imports to set up full config file on runtime
-import style.Base as Base_Config
+#import sys,os
+
+sys.path.append(os.path.abspath("../style/Base/"))
+print('**************************************************')
+print(sys.path)
+import style.Base  as Base_Config
+from style.Base import *
 
 # Set up logging
 logging.basicConfig(
