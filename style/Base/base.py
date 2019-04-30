@@ -6,10 +6,10 @@ sys.path.append(os.path.abspath("/usr/local/lib/python3.5/dist-packages/Toggle-0
 print('**************************************************')
 print(sys.path)
 
-import box_children
-import clutter_children
-import base_color_scheme
-import wifi_children
+import .box_children
+import .clutter_children
+import .base_color_scheme
+import .wifi_children
 
 ### finish imports ###
 bc = box_children.box_children
